@@ -28,38 +28,29 @@ namespace Merge.Controllers
             var lettersResponseCall = await new HttpClient().GetStringAsync(lettersService);
 
             var mergedResponse = $"{numbersResponseCall}{lettersResponseCall}";
-            ////var result = "this password is strong enough";
-
-            ////return Ok(new { mergedResponse, result });
-            //if (mergedResponse == mergedResponse.ToLower())
-            //    return Ok("Your password is not strong enough");
-            //else return Ok(mergedResponse);
-
-            var returnValue = ValidatePassword(mergedResponse);
-            return Ok(returnValue);
+            var returnInput = CheckPassword(mergedResponse);
+            return Ok(returnInput);
         }
-
-
-        string ValidatePassword(string password)
+        string CheckPassword(string password)
         {
             var input = password;
             var ErrorMessage = string.Empty;
 
-            var hasNumber = new Regex(@"[0-9]+");
-            var hasUpperChar = new Regex(@"[A-M]+");
-            var hasLowerChar = new Regex(@"[a-m]+");
+            var Number = new Regex(@"[0-9]+");
+            var UpperCase = new Regex(@"[A-M]+");
+            var LowerCase = new Regex(@"[a-m]+");
 
-            if (!hasLowerChar.IsMatch(input))
+            if (!LowerCase.IsMatch(input))
             {
                 ErrorMessage = "Great! Password with numbers take 1000 hours to crack";
                 return $"{password}: {ErrorMessage}";
             }
-            else if (!hasUpperChar.IsMatch(input))
+            else if (!UpperCase.IsMatch(input))
             {
                 ErrorMessage = "Its good to have a mix of Upper and Lower case letters!";
                 return $"{password}: {ErrorMessage}";
             }
-            else if (!hasNumber.IsMatch(input))
+            else if (!Number.IsMatch(input))
             {
                 ErrorMessage = "Special characters make passwords 10 times harder to crack!";
                 return $"{password}: {ErrorMessage}";
@@ -73,4 +64,9 @@ namespace Merge.Controllers
 }
 
 
+////var result = "this password is strong enough";
 
+////return Ok(new { mergedResponse, result });
+//if (mergedResponse == mergedResponse.ToLower())
+//    return Ok("Your password is not strong enough");
+//else return Ok(mergedResponse);

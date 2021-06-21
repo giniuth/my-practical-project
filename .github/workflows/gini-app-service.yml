@@ -1,13 +1,15 @@
-name: Build and deploy .NET Core app to Windows WebApp gini-app-service2
+name: Build and deploy .NET Core app to Windows WebApp gini-app-service
 on:
   push:
     branches:
     - master
 env:
-  AZURE_WEBAPP_NAME: gini-app-service2
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.gini_app_service2_57fd }}
+  AZURE_WEBAPP_NAME: gini-app-service
+  AZURE_WEBAPP_PACKAGE_PATH: ./code/Numbers/publish
+  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.gini_app_service_83f3 }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
+  WORKING_DIRECTORY: ./code/Numbers
 jobs:
   build-and-deploy:
     runs-on: windows-latest

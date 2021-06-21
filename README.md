@@ -75,8 +75,9 @@ In my code, I created a separate folder, repositories and interfaces and created
 ![Screenshot (457)](https://user-images.githubusercontent.com/82108067/122819222-0f80da80-d2d2-11eb-87c0-80be4a4c8f7e.png)
 ![Screenshot (458)](https://user-images.githubusercontent.com/82108067/122819260-1f98ba00-d2d2-11eb-98c1-36aa7a8ea473.png)
 ![Screenshot (459)](https://user-images.githubusercontent.com/82108067/122819292-2c1d1280-d2d2-11eb-80ef-fd289a517493.png)
-![Screenshot (460)](https://user-images.githubusercontent.com/82108067/122820395-76eb5a00-d2d3-11eb-848a-9a0005064e79.png)
 ![Screenshot (461)](https://user-images.githubusercontent.com/82108067/122820518-9c786380-d2d3-11eb-9a6e-2d17c0888e41.png)
+![Screenshot (460)](https://user-images.githubusercontent.com/82108067/122820395-76eb5a00-d2d3-11eb-848a-9a0005064e79.png)
+
 
 
 The routing constraint"{id:int}" tells the page to accept requests to the page that contain int route data. If a request to the page doesn't contain route data that can be converted to an int , the runtime returns an HTTP 404 (not found) error.

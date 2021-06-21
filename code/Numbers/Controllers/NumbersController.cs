@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Numbers.Controllers
 {
@@ -12,25 +8,19 @@ namespace Numbers.Controllers
     public class NumbersController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<string> Get()
+        public ActionResult<string>Get()
         {
-            char[] chars = "$%#@!*?()^&; :123456789".ToCharArray();
+            char[] numberschars = "$%#@!*?()^&; :123456789".ToCharArray();
             string password = string.Empty;
             Random rnd = new Random();
             int length = 5;
 
-            //var rand = new Random();
-            //            //Console.WriteLine("Five random integers between 0 and 100:");
-            //            //for (int ctr = 0; ctr <= 4; ctr++)
-            //            //    Console.Write("{0,8:N0}", rand.Next(101));
-            //            //return ToString(); Console.WriteLine();
-
             // counter ctr = i 
             for (int ctr = 0; ctr < length; ctr++)
             {
-                int x = rnd.Next(1, chars.Length);
-                if (!password.Contains(chars.GetValue(x).ToString()))
-                    password += chars.GetValue(x);
+                int x = rnd.Next(1, numberschars.Length);
+                if (!password.Contains(numberschars.GetValue(x).ToString()))
+                    password += numberschars.GetValue(x);
                 else
                     ctr--;
             }

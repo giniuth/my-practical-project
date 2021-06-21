@@ -1,36 +1,43 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System;
+using Microsoft.Extensions.Options;
+using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Merge.Controllers
 {
+
     [ApiController]
     [Route("[controller]")]
     public class MergeController : ControllerBase
 
     {
-        private IConfiguration Configuration;
-        public MergeController(IConfiguration configuration)
+       
+        public AppSettings Configuration;
+        public MergeController(IOptions<AppSettings> settings)
         {
-            Configuration = configuration;
+            Configuration = settings.Value;
         }
+
+       
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-
-            var numbersService = $"{Configuration["numbersServiceURL"]}/numbers";
+           
+            var numbersService = $"{Configuration.numbersServiceURL}/numbers";
             var numbersResponseCall = await new HttpClient().GetStringAsync(numbersService);
 
-            var lettersService = $"{Configuration["lettersServiceURL"]}/letters";
+          
+            var lettersService = $"{Configuration.lettersServiceURL}/letters";
             var lettersResponseCall = await new HttpClient().GetStringAsync(lettersService);
 
             var mergedResponse = $"{numbersResponseCall}{lettersResponseCall}";
             var returnInput = CheckPassword(mergedResponse);
             return Ok(returnInput);
         }
+
+        [NonAction]
         string CheckPassword(string password)
         {
             var input = password;
@@ -64,9 +71,3 @@ namespace Merge.Controllers
 }
 
 
-////var result = "this password is strong enough";
-
-////return Ok(new { mergedResponse, result });
-//if (mergedResponse == mergedResponse.ToLower())
-//    return Ok("Your password is not strong enough");
-//else return Ok(mergedResponse);

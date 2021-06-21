@@ -70,7 +70,7 @@ In my code, I created a separate folder, repositories and interfaces and created
 * Additionally, the add function of décor details I did inside the eventtypes controller, therefore the way I performed the test had to be different to how I did the tests for eventtypes tests because I now need to pass in the eventtype controller variable
 * Another reason I have a lower test coverage is because I am testing files that should be ignored. I am testing for example the dbContext which could be ignored and as a whole this could be reducing my overall coverage percentage.
 
-
+![Screenshot (451)](https://user-images.githubusercontent.com/82108067/122818666-6803a800-d2d1-11eb-8a5e-e93941ee7e24.png)
 ![Screenshot (456)](https://user-images.githubusercontent.com/82108067/122819149-f9731a00-d2d1-11eb-8b7f-9a369eb06f40.png)
 ![Screenshot (457)](https://user-images.githubusercontent.com/82108067/122819222-0f80da80-d2d2-11eb-87c0-80be4a4c8f7e.png)
 ![Screenshot (458)](https://user-images.githubusercontent.com/82108067/122819260-1f98ba00-d2d2-11eb-98c1-36aa7a8ea473.png)

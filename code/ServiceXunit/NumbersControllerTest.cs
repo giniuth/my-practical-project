@@ -17,6 +17,7 @@ namespace ServiceXunit
             //Assert
             Assert.NotNull(controllerActionResult);
             Assert.NotNull("$%#@!*?()^&; :123456789");
+            //hard
         }
  
         [Fact]

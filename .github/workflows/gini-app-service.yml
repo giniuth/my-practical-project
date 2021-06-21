@@ -5,11 +5,8 @@ on:
     - master
 env:
   AZURE_WEBAPP_NAME: gini-app-service
-  AZURE_WEBAPP_PACKAGE_PATH: ./code/Numbers/publish
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.gini_app_service_83f3 }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
-  WORKING_DIRECTORY: ./code/Numbers
 jobs:
   build-and-deploy:
     runs-on: windows-latest

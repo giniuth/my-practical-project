@@ -71,14 +71,12 @@ In my code, I created a separate folder, repositories and interfaces and created
 * Another reason I have a lower test coverage is because I am testing files that should be ignored. I am testing for example the dbContext which could be ignored and as a whole this could be reducing my overall coverage percentage.
 
 
+![Screenshot (456)](https://user-images.githubusercontent.com/82108067/122819149-f9731a00-d2d1-11eb-8b7f-9a369eb06f40.png)
+![Screenshot (457)](https://user-images.githubusercontent.com/82108067/122819222-0f80da80-d2d2-11eb-87c0-80be4a4c8f7e.png)
+![Screenshot (458)](https://user-images.githubusercontent.com/82108067/122819260-1f98ba00-d2d2-11eb-98c1-36aa7a8ea473.png)
+![Screenshot (459)](https://user-images.githubusercontent.com/82108067/122819292-2c1d1280-d2d2-11eb-80ef-fd289a517493.png)
+![Screenshot (450)](https://user-images.githubusercontent.com/82108067/122819475-6edeea80-d2d2-11eb-8d11-0364d8c3923a.png)
 
-![Screenshot (134)](https://user-images.githubusercontent.com/82108067/117584411-b2a3d900-b104-11eb-836b-1b7190199b6d.png)
-
-![Screenshot (98)](https://user-images.githubusercontent.com/82108067/117584529-6ad18180-b105-11eb-878e-39987f8a7eb2.png)
-
-![Screenshot (136)](https://user-images.githubusercontent.com/82108067/117584485-3362d500-b105-11eb-8653-6ebf6328977a.png)
-
-![Screenshot (139)](https://user-images.githubusercontent.com/82108067/117618328-abf97e00-b165-11eb-816c-087a8118c52f.png)
 
 The routing constraint"{id:int}" tells the page to accept requests to the page that contain int route data. If a request to the page doesn't contain route data that can be converted to an int , the runtime returns an HTTP 404 (not found) error.
 

@@ -1,15 +1,15 @@
-name: Build and deploy .NET Core app to Windows WebApp NumbersGU-app-service
+name: Build and deploy .NET Core app to Windows WebApp LettersGU-app-service
 on:
   push:
     branches:
     - master
 env:
-  AZURE_WEBAPP_NAME: NumbersGU-app-service
-  AZURE_WEBAPP_PACKAGE_PATH: ./code/Numbers/publish
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.NumbersGU_app_service_c351 }}
+  AZURE_WEBAPP_NAME: LettersGU-app-service
+  AZURE_WEBAPP_PACKAGE_PATH: ./code/Letters/publish
+  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.LettersGU_app_service_dfc5 }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 5.0.x
-  WORKING_DIRECTORY: ./code/Numbers
+  WORKING_DIRECTORY: ./code/Letters
 jobs:
   build-and-deploy:
     runs-on: windows-latest

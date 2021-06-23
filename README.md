@@ -93,18 +93,30 @@ I deployed my Web Application through Azure manually (using publish profile thro
 
 ![Screenshot (133)](https://user-images.githubusercontent.com/82108067/117584410-b172ac00-b104-11eb-89d1-e9c4ff935dba.png)
 
-Known issues:
----
-* Users are unable to edit currently at this point in time
-* Users can currently add more than one decor detail therefore I would need to change the code to make it that only one event has one corresponding decordetail
+
+Testing proof
+![Screenshot (451)](https://user-images.githubusercontent.com/82108067/123105032-5afccb00-d42f-11eb-9f09-76c38bd071f1.png)
+![Screenshot (461)](https://user-images.githubusercontent.com/82108067/123105042-5df7bb80-d42f-11eb-8d1c-c3315e000d34.png)
+![Screenshot (460)](https://user-images.githubusercontent.com/82108067/123105049-605a1580-d42f-11eb-8480-ecb3f0c3e6eb.png)
+Appssettings proof
+![Screenshot (475)](https://user-images.githubusercontent.com/82108067/123105231-8d0e2d00-d42f-11eb-8bab-9a747239668f.png)
+Showing app working successfully:
+![Screenshot (486)](https://user-images.githubusercontent.com/82108067/123105359-a616de00-d42f-11eb-8a7b-719a6f12ec17.png)
+![Screenshot (487)](https://user-images.githubusercontent.com/82108067/123105415-b464fa00-d42f-11eb-9125-f91b5e3593be.png)
+![Screenshot (485)](https://user-images.githubusercontent.com/82108067/123105385-aca55580-d42f-11eb-94d1-c33ad91b09db.png)
+Terraform creating
+![Screenshot (481)](https://user-images.githubusercontent.com/82108067/123105517-c9418d80-d42f-11eb-9d20-caeb482d6286.png)
+
+
+
 
 **Future improvements:**
 ---
 
-* I would like to add the '£' sign when adding the budget, even though this company is UK based - it would make the website more credible
-* Users might want to add more than one inspo picture, therefore a strategy for this could be implemented
-* For the future, contact details and a log in system would be necessary
-* There could also be more pictures uploaded from previous events that would help attract more customers and it would be a place for us to showcase our previous work
+* The code coverage result can be increase by carrying out more tests, in particular testing for if-else statements
+* With additional timings, I could have combined 4 yaml files into one – this would make my work neater and since its only 4 services and not too complex this would be better
+* More work can be done on the frontend (HTML) to enhance it and make it more visually appealing
+
 
 
 Author

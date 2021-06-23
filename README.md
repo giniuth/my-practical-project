@@ -1,11 +1,11 @@
 # **Password Generator**
 # SFIA 2
-http://eventswebapp.azurewebsites.net/
+
 
 Project brief
 The project was intended to create a service-orientated architecture for an application, which will be composed of at least 4 services that work together. I have decided to create a password generator using C#, ASP.NET, XUnit testing the application through unit testing and deployment the application using GitHub action.
 
-
+![Screenshot (508)](https://user-images.githubusercontent.com/82108067/123120872-95209980-d43c-11eb-891a-d53ab2eababf.png)
 
 
 
@@ -28,7 +28,7 @@ Using a Trello board helped me visualise the process clearly and keep track of w
 <!-- Blockquote -->
 > Trello board two weeks into the project
 
-![Screenshot (121)](https://user-images.githubusercontent.com/82108067/117577185-a3ab2f80-b0e0-11eb-947f-f10e01d1cd72.png)
+![Screenshot (509)](https://user-images.githubusercontent.com/82108067/123125828-c56a3700-d440-11eb-971e-f1e8fa2e6827.png)
 
 * Notes
 * User stories
@@ -50,9 +50,8 @@ In hindsight, I'm glad I took a simple approach - I was able to assign the tasks
 
 *XUnit Testing*
  
-Moq is a mocking framework for C# .NET. It is used in **unit testing** to isolate a class under test from its dependencies and ensure that the proper methods on the dependent objects are being called. Mock objects allow you to mimic the behaviour of classes and interfaces, letting you code the in the test interact with them as if they were real.
-
-In my code, I created a separate folder, repositories and interfaces and created objects that would mock my previous work. I then carried out tests (using test explorer) to see if my code was doing what it was supposed to. I tested all the features I had created, so add, delete, update. As you can see below 7 tests passed yet my coverage report shows a 37.5% line coverage. Red means these lines could run but are never executed.
+This image above shows the XUnit tests written on visual studio code have successfully passed.
+From the image above we can see the overall code coverage of the application is 73.5%. In order to improve this percentage, I would test the if-else statements.
 
 Testing proof
 ![Screenshot (451)](https://user-images.githubusercontent.com/82108067/123105032-5afccb00-d42f-11eb-9f09-76c38bd071f1.png)
@@ -76,6 +75,10 @@ The routing constraint"{id:int}" tells the page to accept requests to the page t
 **Issues faced**
 
 ![Screenshot (475)](https://user-images.githubusercontent.com/82108067/123105231-8d0e2d00-d42f-11eb-8bab-9a747239668f.png)
+Another issue I came across was the terraform file being too large meaning when it came to committing and pushing my changes onto GitHub, this was being prevented. I then decided to save all my work and do the reset command shown below which then helped resolve the situation.
+git reset --hard @{u}
+Another issue I faced was a typo I made in the case sensitivity of my appsettings (AppSettings). I realised this after I deployed my services which meant I had to destroy my terraform (‘terraform destroy’) and rebuild it again with the correct casing. His error caused my frontend to not work as shown below.( add 441)
+
 
 **Future improvements:**
 ---
@@ -84,6 +87,12 @@ The routing constraint"{id:int}" tells the page to accept requests to the page t
 * With additional timings, I could have combined 4 yaml files into one – this would make my work neater and since its only 4 services and not too complex this would be better
 * More work can be done on the frontend (HTML) to enhance it and make it more visually appealing
 
+[Backup proof of working application]
+As mentioned in the risk assessment, when working through the final project – one of the obstacles I came across was GitHub actions going down (down-time) – this meant my changes in the workflow were not building meaning my front-end website will not be updated to the latest version.
+
+![Screenshot (486)](https://user-images.githubusercontent.com/82108067/123105359-a616de00-d42f-11eb-8a7b-719a6f12ec17.png)
+![Screenshot (487)](https://user-images.githubusercontent.com/82108067/123105415-b464fa00-d42f-11eb-9125-f91b5e3593be.png)
+![Screenshot (485)](https://user-images.githubusercontent.com/82108067/123105385-aca55580-d42f-11eb-94d1-c33ad91b09db.png)
 
 
 Author

@@ -1,8 +1,9 @@
 # **Password Generator**
 # SFIA 2
 
-
 Project brief
+---
+
 
 The project was intended to create a service-orientated architecture for an application, which will be composed of at least 4 services that work together. I have decided to create a **password generator** using C#, ASP.NET, XUnit testing the application through unit testing and deployment the application using GitHub action.
 
@@ -16,13 +17,7 @@ Service Architecture
 
 ![Screenshot (511)](https://user-images.githubusercontent.com/82108067/123141788-aa072800-d450-11eb-9d90-a601f43bcde5.png)
 
-**Additional information:**
----
 
-<!-- UL -->
-* I have included a gitignore file, this simply blocks out appsettings.Json, any terraform files because they may contain passwords and therefore I have successfully been able to avoid that information getting gin the wrong hands. 
-
-* As part of the requirements, I have demonstrated storing code in a structured manner with the use of branches. I did all my testing on a ‘testing branch’ and merged all my work into the master once I was ready. This ensured I faced no conflicts.
 
 **Project Tracking**
 ---
@@ -50,6 +45,7 @@ In hindsight, I'm glad I took a simple approach - I was able to assign the tasks
 **Risk Assessment**
 ---
 
+![Screenshot (514)](https://user-images.githubusercontent.com/82108067/123174074-77245a80-d477-11eb-8312-625747277ba5.png)
 
 
 **Testing**
@@ -57,7 +53,6 @@ In hindsight, I'm glad I took a simple approach - I was able to assign the tasks
 
 *XUnit Testing*
  
- Testing proof
 ![Screenshot (451)](https://user-images.githubusercontent.com/82108067/123105032-5afccb00-d42f-11eb-9f09-76c38bd071f1.png)
 ![Screenshot (461)](https://user-images.githubusercontent.com/82108067/123105042-5df7bb80-d42f-11eb-8d1c-c3315e000d34.png)
 ![Screenshot (460)](https://user-images.githubusercontent.com/82108067/123105049-605a1580-d42f-11eb-8480-ecb3f0c3e6eb.png)
@@ -79,6 +74,7 @@ The three commands help create the workflow successfully:
 
 
 ![Screenshot (481)](https://user-images.githubusercontent.com/82108067/123105517-c9418d80-d42f-11eb-9d20-caeb482d6286.png)
+![Screenshot (484)](https://user-images.githubusercontent.com/82108067/123172677-5ce97d00-d475-11eb-8272-c0a1122d6d93.png)
 ![Screenshot (470)](https://user-images.githubusercontent.com/82108067/123140404-27ca3400-d44f-11eb-8582-e8b4168fcfb0.png)
 
 ![Screenshot (510)](https://user-images.githubusercontent.com/82108067/123140394-2567da00-d44f-11eb-9e5b-86b34220acb5.png)
@@ -108,6 +104,14 @@ Another issue I faced with merge conflict: (highlighted in risk assessment)
 
 ![Screenshot (474)](https://user-images.githubusercontent.com/82108067/123139733-6f9c8b80-d44e-11eb-8200-3c2df512fff9.png)
 
+**Additional information:**
+---
+
+<!-- UL -->
+* I have included a gitignore file, this simply blocks out appsettings.Json, any terraform files because they may contain passwords and therefore I have successfully been able to avoid that information getting gin the wrong hands. 
+
+* As part of the requirements, I have demonstrated storing code in a structured manner with the use of branches. I did all my testing on a ‘testing branch’ and merged all my work into the master once I was ready. This ensured I faced no conflicts.
+
 
 **Future improvements:**
 ---
@@ -124,6 +128,12 @@ As mentioned in the risk assessment, when working through the final project – 
 ![Screenshot (487)](https://user-images.githubusercontent.com/82108067/123105415-b464fa00-d42f-11eb-9125-f91b5e3593be.png)
 ![Screenshot (485)](https://user-images.githubusercontent.com/82108067/123105385-aca55580-d42f-11eb-94d1-c33ad91b09db.png)
 
+
+What to do in situations beyond our control and how would be handle, mitigate this situation?
+
+Ideally, you want to identity the cause and solve it but in some cases it is simply out of our control. Git is a distributed source control therefore having and keeping a working copy on hand is always a good idea. Another alternative would be switching to another course control, such as Bitbucket. These scenarios depend on the urgency of the issue, after 2-3 hour downtime, git tends to work fine – but sometimes timings get in the way.
+
+There are numerous benefits of moving to the cloud, costs, ease, future of working. In terms of deployment after facing issues on project one using Azure pipelines, I decided it would be smart to go straight into deploying via GitHub Action. The Academy also showed me the number of ways I can create resources in the cloud (cloud shell, azure portal, SDK, Azure CLI)
 
 
 

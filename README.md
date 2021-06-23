@@ -7,13 +7,18 @@ The project was intended to create a service-orientated architecture for an appl
 
 ![Screenshot (508)](https://user-images.githubusercontent.com/82108067/123120872-95209980-d43c-11eb-891a-d53ab2eababf.png)
 
+CI (Continuous Integration)
+The benefit of having this pipeline is that it allows developers to integrate newly-generated code easily and frequently, and is achieved through the use of automated testing tools to check the correctness of code before full integration.
+The version control system (VCS) and the version control system provider (VCSP) is Git and GitHub. The VCS is designed to track changes to code over time as contributors add new features to the application. This system allows for cohesive collaboration and the ability to easily revert an application to a previous, stable state if new code breaks something. The CI server handles all the automated building, testing, and deployment of code as it is pushed to the VCS.
 
+Service Architecture
+![Screenshot (511)](https://user-images.githubusercontent.com/82108067/123141788-aa072800-d450-11eb-9d90-a601f43bcde5.png)
 
 **Additional information:**
 ---
 
 <!-- UL -->
-* Users are then required to give us more details including the guest capacity, whether they’d like Alcohol, Catering and if so what Cuisine.
+*I have included a gitignore file, this simply blocks out appsettings.Json, any terraform files because they may contain passwords and therefore I have successfully been able to avoid that information getting gin the wrong hands. 
 
 * Users at this point can add a description or give us further details that will help the event company when it comes to planning their specific event.
 
@@ -51,7 +56,7 @@ In hindsight, I'm glad I took a simple approach - I was able to assign the tasks
 *XUnit Testing*
  
 This image above shows the XUnit tests written on visual studio code have successfully passed.
-From the image above we can see the overall code coverage of the application is 73.5%. In order to improve this percentage, I would test the if-else statements.
+From the image above we can see the overall code coverage of the application is 73.5%. As you can my FrontEnd and Numbers Controller have a 100% test coverage, however my letters and merge controller have less than 100%. This is because in these two controllers I have incorporated an if-else statement. When it came to writing tests, I’m sure with time I would have been able to figure out how to write tests for if-else statements but simply writing more tests would increase this line coverage to 100% thereby increasing the overall line coverage from 73.5% to something higher.
 
 Testing proof
 ![Screenshot (451)](https://user-images.githubusercontent.com/82108067/123105032-5afccb00-d42f-11eb-9f09-76c38bd071f1.png)
@@ -69,7 +74,9 @@ The routing constraint"{id:int}" tells the page to accept requests to the page t
 ---
 
 ![Screenshot (481)](https://user-images.githubusercontent.com/82108067/123105517-c9418d80-d42f-11eb-9d20-caeb482d6286.png)
+![Screenshot (470)](https://user-images.githubusercontent.com/82108067/123140404-27ca3400-d44f-11eb-8582-e8b4168fcfb0.png)
 
+![Screenshot (510)](https://user-images.githubusercontent.com/82108067/123140394-2567da00-d44f-11eb-9e5b-86b34220acb5.png)
 
 
 **Issues faced**
@@ -78,6 +85,12 @@ The routing constraint"{id:int}" tells the page to accept requests to the page t
 Another issue I came across was the terraform file being too large meaning when it came to committing and pushing my changes onto GitHub, this was being prevented. I then decided to save all my work and do the reset command shown below which then helped resolve the situation.
 git reset --hard @{u}
 Another issue I faced was a typo I made in the case sensitivity of my appsettings (AppSettings). I realised this after I deployed my services which meant I had to destroy my terraform (‘terraform destroy’) and rebuild it again with the correct casing. His error caused my frontend to not work as shown below.( add 441)
+
+![Screenshot (476)](https://user-images.githubusercontent.com/82108067/123139746-73301280-d44e-11eb-8bd3-f3d3a7017543.png)
+
+Another issue I faced with merge conflict: (highlighted in risk assessment)
+
+![Screenshot (474)](https://user-images.githubusercontent.com/82108067/123139733-6f9c8b80-d44e-11eb-8200-3c2df512fff9.png)
 
 
 **Future improvements:**
@@ -93,6 +106,13 @@ As mentioned in the risk assessment, when working through the final project – 
 ![Screenshot (486)](https://user-images.githubusercontent.com/82108067/123105359-a616de00-d42f-11eb-8a7b-719a6f12ec17.png)
 ![Screenshot (487)](https://user-images.githubusercontent.com/82108067/123105415-b464fa00-d42f-11eb-9125-f91b5e3593be.png)
 ![Screenshot (485)](https://user-images.githubusercontent.com/82108067/123105385-aca55580-d42f-11eb-94d1-c33ad91b09db.png)
+
+
+
+
+Credits:
+Dara Oladapo
+QA Community 
 
 
 Author

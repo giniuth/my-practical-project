@@ -102,10 +102,13 @@ The YAML language tends to be used for creating configuration files. The images 
 
 ![Screenshot (475)](https://user-images.githubusercontent.com/82108067/123105231-8d0e2d00-d42f-11eb-8bab-9a747239668f.png)
 
+Another issue I faced was a typo I made in the case sensitivity of my appsettings (AppSettings). I realised this after I deployed my services which meant I had to destroy my terraform (‘terraform destroy’) and rebuild it again with the correct casing. His error caused my frontend to not work as shown below.
+
+![Screenshot (441)](https://user-images.githubusercontent.com/82108067/123213527-005e8000-d4be-11eb-9803-376c011bca46.png)
+
 Another issue I came across was the terraform file being too large meaning when it came to committing and pushing my changes onto GitHub, this was being prevented. I then decided to save all my work and do the reset command shown below which then helped resolve the situation.
 git reset --hard @{u}
 
-Another issue I faced was a typo I made in the case sensitivity of my appsettings (AppSettings). I realised this after I deployed my services which meant I had to destroy my terraform (‘terraform destroy’) and rebuild it again with the correct casing. His error caused my frontend to not work as shown below.( add 441)
 
 ![Screenshot (476)](https://user-images.githubusercontent.com/82108067/123139746-73301280-d44e-11eb-8bd3-f3d3a7017543.png)
 

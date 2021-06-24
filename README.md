@@ -10,10 +10,14 @@ The project was intended to create a service-orientated architecture for an appl
 ![Screenshot (508)](https://user-images.githubusercontent.com/82108067/123120872-95209980-d43c-11eb-891a-d53ab2eababf.png)
 
 CI (Continuous Integration)
+---
+
 
 The benefit of having this pipeline is that it allows developers to integrate newly-generated code easily and frequently, and is achieved through the use of automated testing tools to check the correctness of code before full integration. The version control system (VCS) and the version control system provider (VCSP) is Git and GitHub. The VCS is designed to track changes to code over time as contributors add new features to the application. This system allows for cohesive collaboration and the ability to easily revert an application to a previous, stable state if new code breaks something. The CI server handles all the automated building, testing, and deployment of code as it is pushed to the VCS.
 
 Service Architecture
+---
+
 
 ![Screenshot (511)](https://user-images.githubusercontent.com/82108067/123141788-aa072800-d450-11eb-9d90-a601f43bcde5.png)
 
@@ -47,6 +51,9 @@ In hindsight, I'm glad I took a simple approach - I was able to assign the tasks
 
 ![Screenshot (514)](https://user-images.githubusercontent.com/82108067/123174074-77245a80-d477-11eb-8312-625747277ba5.png)
 
+Proof:
+
+![Screenshot (474)](https://user-images.githubusercontent.com/82108067/123139733-6f9c8b80-d44e-11eb-8200-3c2df512fff9.png)
 
 **Testing**
 ---
@@ -60,7 +67,8 @@ In hindsight, I'm glad I took a simple approach - I was able to assign the tasks
 
 This image above shows the XUnit tests written on visual studio code have successfully passed. From the image above we can see the overall code coverage of the application is 73.5%. As you can see, my FrontEnd and Numbers Controller has a 100% test coverage, however my letters and merge controller have less than 100%. This is because in these two controllers I have incorporated an if-else statement. When it came to writing tests, I’m sure with time I would have been able to figure out how to write tests for if-else statements but simply writing more tests would increase this line coverage to 100% thereby increasing the overall line coverage from 73.5% to something higher.
 
-
+(Room for improvement): I did not manage to find out how to exclude Views from the testing results, which may have affected the final coverage result.
+* [ExcludeFromCodeCoverage]
 
 **Deployment**
 ---
@@ -80,7 +88,7 @@ The three commands help create the workflow successfully:
 ![Screenshot (510)](https://user-images.githubusercontent.com/82108067/123140394-2567da00-d44f-11eb-9e5b-86b34220acb5.png)
 
 
-The YAML language tends to be used for creating configuration files. The images above shows that once a file pushed onto the master branch, the following build and deploy actions should take place. During the project I had alter the code to essentially direct the directory into the place in which my code was stored. The addition of ./code/ were made to AZURE_WEBAPP_PACKAGE_PATH and WORKING_DIRECTORY. Once completed this was committed, this leads to the workflow running and essentially a build and deploy process was then triggered (As shown below in the image).
+The YAML language tends to be used for creating configuration files. The images below shows that once a file pushed onto the master branch, the following build and deploy actions should take place. During the project I had alter the code to essentially direct the directory into the place in which my code was stored. The addition of ./code/ were made to AZURE_WEBAPP_PACKAGE_PATH and WORKING_DIRECTORY. Once completed this was committed, this leads to the workflow running and essentially a build and deploy process was then triggered (As shown below in the image).
 
 ![Screenshot (512)](https://user-images.githubusercontent.com/82108067/123166616-84d4e280-d46d-11eb-8f63-9f2742bddc3e.png)
 
@@ -90,6 +98,7 @@ The YAML language tends to be used for creating configuration files. The images 
 
 
 **Issues faced**
+---
 
 ![Screenshot (475)](https://user-images.githubusercontent.com/82108067/123105231-8d0e2d00-d42f-11eb-8bab-9a747239668f.png)
 
@@ -100,9 +109,7 @@ Another issue I faced was a typo I made in the case sensitivity of my appsetting
 
 ![Screenshot (476)](https://user-images.githubusercontent.com/82108067/123139746-73301280-d44e-11eb-8bd3-f3d3a7017543.png)
 
-Another issue I faced with merge conflict: (highlighted in risk assessment)
 
-![Screenshot (474)](https://user-images.githubusercontent.com/82108067/123139733-6f9c8b80-d44e-11eb-8200-3c2df512fff9.png)
 
 **Additional information:**
 ---

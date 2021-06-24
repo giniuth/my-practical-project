@@ -145,6 +145,11 @@ Ideally, you want to identity the cause and solve it but in some cases it is sim
 
 There are numerous benefits of moving to the cloud, costs, ease, future of working. In terms of deployment after facing issues on project one using Azure pipelines, I decided it would be smart to go straight into deploying via GitHub Action. The Academy also showed me the number of ways I can create resources in the cloud (cloud shell, azure portal, SDK, Azure CLI)
 
+It very interesting to see how to create resource groups and variables inside Terraform, and then it actually displays inside the Azure Portal – which meant the manual clicking element was taking out. IaaC, such as Terraform ensures the user faces no issues/downtime which is what clients are after. Updates are self-managed and frequent.
+
+
+Using best practices such as commenting throughout my code, this helps other teammates or in this case Dara understand what my code is intended to do. This saves time and is a good habit to continue doing.
+
 
 
 Credits:

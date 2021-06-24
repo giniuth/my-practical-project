@@ -9,6 +9,11 @@ The project was intended to create a service-orientated architecture for an appl
 
 ![Screenshot (508)](https://user-images.githubusercontent.com/82108067/123120872-95209980-d43c-11eb-891a-d53ab2eababf.png)
 
+* Service 1: FrontEnd
+* Service 2: Numbers Service (123456789), (%$^&*£"?/@)
+* Service 3: Letters Service (abcdefghijklmnopqrstuvwxyz, ABCDEFGHIJKLMNOPQRSTUVWXYZ)
+* Service 4: Merge Service (combination)
+
 CI (Continuous Integration)
 ---
 
